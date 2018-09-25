@@ -10,19 +10,26 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnHuffman;
+    Button btnLZW;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnHuffman;
-        Button btnLZW;
+
 
         btnHuffman=(Button) findViewById(R.id.btnHuffman);
         btnLZW=(Button) findViewById(R.id.btnLZW);
 
         btnHuffman.setOnClickListener(view ->{
             startActivity(new Intent(getApplicationContext(), Huffman.class));
+        });
+
+
+        btnLZW.setOnClickListener(view ->{
+            startActivity(new Intent(getApplicationContext(), LZW.class));
         });
 
 
