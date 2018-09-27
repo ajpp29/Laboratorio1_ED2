@@ -77,4 +77,10 @@ public class Huffman extends AppCompatActivity {
         return stringBuilder.toString();
     }
 
+    private InputStream inputStreamFromUri(Uri uri)throws IOException{
+        InputStream inputStream=getContentResolver().openInputStream(uri);
+        inputStream.close();
+        return inputStream;
+    }
+
 }
